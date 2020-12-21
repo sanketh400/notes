@@ -22,3 +22,15 @@ sudo iptables -A INPUT -p tcp --destination-port port_number -j DROP
 nginx configuring port
 
 vi /etc/nginx/nginx.conf  
+
+
+server {
+listen 8096 Default;
+server_name 172.16.238.16;
+}
+
+location / {
+root /var/www/html;
+proxy_pass http://172.16.238.16:6300;
+}
+
