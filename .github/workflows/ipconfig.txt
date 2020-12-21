@@ -15,3 +15,10 @@ sudo systemctl status iptables
 
 sudo iptables -A INPUT  -p tcp --destination-port port_number -s 172.16.238.14 -j ACCEPT
 sudo iptables -A INPUT -p tcp --destination-port port_number -j DROP
+
+
+
+--------------------------------------------------
+nginx configuring port
+
+vi /etc/nginx/nginx.conf  
